@@ -1,4 +1,4 @@
-import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
 
 import Container from "./components/Container/Container";
 import ContactList from "./components/ContactList/ContactList";
@@ -13,7 +13,7 @@ function App() {
       <ContactForm />
       <SearchBox />
       <ContactList />
-      <ToastContainer />
+      <Toaster />
     </Container>
   );
 }

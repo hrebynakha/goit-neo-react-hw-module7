@@ -1,0 +1,16 @@
+.error {
+  color: red;
+  border: 1px solid rgb(208, 208, 219);
+  background-color: blanchedalmond;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 100%;
+  padding: 24px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 320px;
+}

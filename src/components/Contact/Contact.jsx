@@ -1,20 +1,24 @@
 import { useDispatch } from "react-redux";
 import { IconContext } from "react-icons";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import {
   AiOutlinePhone,
   AiOutlineUser,
   AiOutlineCloseCircle,
 } from "react-icons/ai";
 
-import { deleteContact } from "../../redux/contactsSlice";
+import { removeContact } from "../../redux/operations";
 import css from "./Contact.module.css";
 
 const Contact = ({ id, name, number, color = "#fff" }) => {
   const dispatch = useDispatch();
-  const onDelete = (contactId) => {
-    dispatch(deleteContact(contactId));
-    toast.warn("Contact deleted!");
+
+  const onDelete = async (contactId) => {
+    toast.promise(dispatch(removeContact(contactId)).unwrap(), {
+      loading: "Loading",
+      success: (data) => `Successfully deleted ${data.name}`,
+      error: "Error when fetching",
+    });
   };
   return (
     <div className={css.contact}>
