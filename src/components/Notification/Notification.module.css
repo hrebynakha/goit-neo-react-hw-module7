@@ -1,0 +1,9 @@
+.notification {
+  padding: 20px 0;
+  background-color: #fc7c66;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 280px;
+}
