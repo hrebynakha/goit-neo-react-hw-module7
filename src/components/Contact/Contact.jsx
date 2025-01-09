@@ -7,7 +7,7 @@ import {
   AiOutlineCloseCircle,
 } from "react-icons/ai";
 
-import { removeContact } from "../../redux/operations";
+import { removeContact } from "../../redux/contactsOps";
 import css from "./Contact.module.css";
 
 const Contact = ({ id, name, number, color = "#fff" }) => {
@@ -17,7 +17,7 @@ const Contact = ({ id, name, number, color = "#fff" }) => {
     toast.promise(dispatch(removeContact(contactId)).unwrap(), {
       loading: "Loading",
       success: (data) => `Successfully deleted ${data.name}`,
-      error: "Error when fetching",
+      error: "Error fetching data",
     });
   };
   return (

@@ -1,13 +1,13 @@
 import MaskedInput from "react-text-mask";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
-
 import * as Yup from "yup";
 import { AiOutlinePhone, AiOutlineUser } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import toast from "react-hot-toast";
+
+import { addContact } from "../../redux/contactsOps";
 import css from "./ContactForm.module.css";
-import { addContact } from "../../redux/operations";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
