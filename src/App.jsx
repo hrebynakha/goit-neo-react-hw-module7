@@ -32,7 +32,7 @@ function App() {
       <ContactForm />
       <SearchBox />
       {loading && <Loader />}
-      {error && <ErrorMessage />}
+      {error && <ErrorMessage msg={error} />}
       {filtredContacts.length > 0 ? (
         <ContactList contacts={filtredContacts} />
       ) : (
