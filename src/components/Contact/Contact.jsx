@@ -15,7 +15,7 @@ const Contact = ({ id, name, number, color = "#fff" }) => {
 
   const onDelete = async (contactId) => {
     toast.promise(dispatch(removeContact(contactId)).unwrap(), {
-      loading: "Loading",
+      loading: "Removing contact...",
       success: (data) => `Successfully deleted ${data.name}`,
       error: "Error fetching data",
     });

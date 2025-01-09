@@ -13,7 +13,7 @@ const ContactForm = () => {
   const dispatch = useDispatch();
   const onSubmit = async (contact) => {
     toast.promise(dispatch(addContact(contact)).unwrap(), {
-      loading: "Loading",
+      loading: "Adding contact...",
       success: (data) => `Successfully added ${data.name}`,
       error: "Error when fetching",
     });

@@ -1,10 +1,18 @@
+import { useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
+import Notification from "../Notification/Notification";
+import {
+  selectContactsLoading,
+  selectVisibleContacts,
+} from "../../redux/contactsSlice";
 import css from "./ContactList.module.css";
 
-const ContactList = ({ contacts }) => {
-  return (
+const ContactList = () => {
+  const loading = useSelector(selectContactsLoading);
+  const filtredContacts = useSelector(selectVisibleContacts);
+  return filtredContacts.length > 0 ? (
     <ul className={css.contacts}>
-      {contacts.map((contact) => {
+      {filtredContacts.map((contact) => {
         return (
           <li key={contact.id}>
             <Contact
@@ -16,6 +24,8 @@ const ContactList = ({ contacts }) => {
         );
       })}
     </ul>
+  ) : (
+    !loading && <Notification />
   );
 };
 
