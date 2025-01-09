@@ -36,7 +36,7 @@ function App() {
       {filtredContacts.length > 0 ? (
         <ContactList contacts={filtredContacts} />
       ) : (
-        <Notification />
+        !loading && <Notification />
       )}
       <Toaster />
     </Container>
