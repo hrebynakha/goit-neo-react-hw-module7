@@ -17,8 +17,8 @@ const ContactList = () => {
           <li key={contact.id}>
             <Contact
               id={contact.id}
-              name={contact.name}
-              number={contact.number}
+              name={contact.first_name + " " + contact.last_name}
+              number={contact.phone}
             />
           </li>
         );

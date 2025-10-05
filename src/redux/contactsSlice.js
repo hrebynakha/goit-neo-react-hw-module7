@@ -30,7 +30,8 @@ const slice = createSlice({
       .addMatcher(
         (action) => action.type.endsWith("/rejected"),
         (state, { error, payload }) => {
-          state.error = payload ? payload.response.data : error;
+          console.log(payload.response.data.detail[0].msg);
+          state.error = payload ? payload.response.data.detail[0].msg : error;
           state.loading = false;
         }
       )
@@ -50,7 +51,7 @@ export const selectVisibleContacts = createSelector(
   [selectContactsItems, selectNameFilter],
   (contacts, filter) => {
     return contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
+      contact.first_name.toLowerCase().includes(filter.toLowerCase())
     );
   }
 );

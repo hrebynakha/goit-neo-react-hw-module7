@@ -2,14 +2,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2px;
-  margin-bottom:14px;
-  padding: 10px 0;
-  font-size: 14px;
-}
-.nameWrap {
-  display: flex;
   gap: 12px;
+  margin-bottom: 26px;
+  padding: 25px 0;
 }
 
 .form input {
@@ -20,12 +15,12 @@
   border-radius: 12px;
   padding: 20px 0;
   padding-left: 40px;
-  font-size: 14px;
+  font-size: 20px;
   width: 100%;
 }
 
 .form label {
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   text-align: left;
   margin-bottom: 4px;
@@ -76,4 +71,5 @@
 .formField {
   width: 100%;
   max-width: 400px;
+  color: #fff;
 }
