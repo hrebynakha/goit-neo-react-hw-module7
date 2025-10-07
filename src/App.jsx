@@ -26,7 +26,9 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    if (user) {
+      dispatch(fetchContacts());
+    }
   }, [user]);
 
   return (

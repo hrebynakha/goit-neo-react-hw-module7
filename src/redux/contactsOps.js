@@ -4,7 +4,7 @@ import api from "../utils/api";
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
   async (_, thunkAPI) => {
-    const url = "/contacts";
+    const url = "/contacts/";
     try {
       const { data } = await api.get(url);
       return data;
@@ -17,7 +17,7 @@ export const fetchContacts = createAsyncThunk(
 export const removeContact = createAsyncThunk(
   "contacts/addContact",
   async (id, thunkAPI) => {
-    const url = `/contacts/${id}/`;
+    const url = `/contacts/${id}`;
     try {
       const { data } = await api.delete(url);
       return data;

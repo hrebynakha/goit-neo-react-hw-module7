@@ -22,7 +22,7 @@ const ContactForm = () => {
   const onSubmit = async (contact) => {
     toast.promise(dispatch(addContact(contact)).unwrap(), {
       loading: "Adding contact...",
-      success: (data) => `Successfully added ${data.name}`,
+      success: (data) => `Successfully added ${data.first_name} ${data.last_name}`,
       error: "Error when fetching",
     });
   };
